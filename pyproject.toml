@@ -6,9 +6,14 @@ authors = ["samuel adekoya <samuel.adekoya@centricityinsights.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+fastapi = "^0.63.0"
+uvicorn = "^0.13.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+flake8 = {version = "^3.9.0", allow-prereleases = true}
+mypy = {version = "^0.812", allow-prereleases = true}
+black = {version = "^20.8b1", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
