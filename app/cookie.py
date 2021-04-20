@@ -46,21 +46,24 @@ html_sse = """
 async def cookiegen(request, db):
     while True:
         # get last added cookie
-        cookie = db.query(models.Cookie).filter(models.Cookie.opened == False).order_by(models.Cookie.id.desc()).first()
+        cookie = (
+            db.query(models.Cookie)
+            .order_by(models.Cookie.id.desc())
+            .first()
+        )
         if cookie:
-            cookie.opened = True
-            db.commit()
             message = cookie.message
-            if await request.is_disconnected():
-                break
-            yield message
-            await asyncio.sleep(0.5)
+        else:
+            message = "no fortune cookies for you"
+        if await request.is_disconnected():
+            break
+        yield message
+        await asyncio.sleep(0.5)
+
 
 @router.get("/")
 def home():
     return HTMLResponse(content=html_sse, status_code=200)
-
-
 
 
 @router.get("/stream")
