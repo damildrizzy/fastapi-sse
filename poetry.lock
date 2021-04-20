@@ -295,6 +295,17 @@ pymysql = ["pymysql (<1)", "pymysql"]
 sqlcipher = ["sqlcipher3-binary"]
 
 [[package]]
+name = "sse-starlette"
+version = "0.7.2"
+description = "\"SSE plugin for Starlette\","
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+starlette = "*"
+
+[[package]]
 name = "starlette"
 version = "0.13.6"
 description = "The little ASGI library that shines."
@@ -355,7 +366,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "b347c2442d76e226ed36dd1456da3d95f40638a2c8cfcb6003b4a2953f5aeae1"
+content-hash = "9575fdcfd99c1212619fbb5ece57dc3fb8a70620f17d2b705be44b5a13b1539c"
 
 [metadata.files]
 appdirs = [
@@ -608,6 +619,10 @@ sqlalchemy = [
     {file = "SQLAlchemy-1.4.9-cp39-cp39-win32.whl", hash = "sha256:343c679899afdc4952ac659dc46f2075a2bd4fba87ca0df264be838eecd02096"},
     {file = "SQLAlchemy-1.4.9-cp39-cp39-win_amd64.whl", hash = "sha256:386f215248c3fb2fab9bb77f631bc3c6cd38354ca2363d241784f8297d16b80a"},
     {file = "SQLAlchemy-1.4.9.tar.gz", hash = "sha256:f31757972677fbe9132932a69a4f23db59187a072cc26427f56a3082b46b6dac"},
+]
+sse-starlette = [
+    {file = "sse-starlette-0.7.2.tar.gz", hash = "sha256:ae6fd9be099b6016aa7d0b226fb1aa7324f4ecb67ddfd808b7838f12e9f5d29d"},
+    {file = "sse_starlette-0.7.2-py3-none-any.whl", hash = "sha256:8570168e2d2c0c1d230649a8ded333e02c6986e3c9010f3e553b966c35b42238"},
 ]
 starlette = [
     {file = "starlette-0.13.6-py3-none-any.whl", hash = "sha256:bd2ffe5e37fb75d014728511f8e68ebf2c80b0fa3d04ca1479f4dc752ae31ac9"},
